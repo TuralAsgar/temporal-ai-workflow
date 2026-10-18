@@ -32,7 +32,7 @@ func (s *UnitTestSuite) Test_SuccessfulWorkflow() {
 		&ResearchDraftOutput{
 			Topic:       "Test Topic",
 			RawDraft:    "Test raw draft content from Gemini",
-			ModelUsed:   "gemini-2.5-flash",
+			ModelUsed:   "gemini-3.8-flash",
 			ExecutionID: "test-exec-1",
 		}, nil)
 
@@ -40,7 +40,7 @@ func (s *UnitTestSuite) Test_SuccessfulWorkflow() {
 		&PolishReportOutput{
 			ExecutiveSummary: "Test Summary",
 			RefinedContent:   "Test Refined Content",
-			ModelUsed:        "gemini-2.5-flash",
+			ModelUsed:        "gemini-3.8-flash",
 		}, nil)
 
 	s.env.OnActivity(activities.PublishFileActivity, mock.Anything, mock.Anything).Return(
@@ -75,7 +75,7 @@ func (s *UnitTestSuite) Test_ActivityRetryOnFailure() {
 		&ResearchDraftOutput{
 			Topic:       "Test Topic",
 			RawDraft:    "Draft text",
-			ModelUsed:   "gemini-2.5-flash",
+			ModelUsed:   "gemini-3.8-flash",
 			ExecutionID: "test-exec-2",
 		}, nil)
 
@@ -90,7 +90,7 @@ func (s *UnitTestSuite) Test_ActivityRetryOnFailure() {
 			return &PolishReportOutput{
 				ExecutiveSummary: "Recovered summary",
 				RefinedContent:   "Recovered refined content",
-				ModelUsed:        "gemini-2.5-flash",
+				ModelUsed:        "gemini-3.8-flash",
 			}, nil
 		})
 

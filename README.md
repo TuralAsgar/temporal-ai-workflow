@@ -97,7 +97,7 @@ cp .env.example .env
 Set your API key in `.env`:
 ```env
 GEMINI_API_KEY=AIzaSy...
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
 > **Note**: If you don't provide an API key, the demo automatically runs in **Simulation Mode** with realistic delays and rich mock responses, so you can test Temporal workflows immediately!

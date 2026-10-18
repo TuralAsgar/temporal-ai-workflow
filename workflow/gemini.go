@@ -23,7 +23,7 @@ func NewGeminiClient(ctx context.Context) (*GeminiClient, error) {
 	apiKey := strings.TrimSpace(os.Getenv("GEMINI_API_KEY"))
 	modelName := os.Getenv("GEMINI_MODEL")
 	if modelName == "" {
-		modelName = "gemini-2.5-flash"
+		modelName = "gemini-3.8-flash"
 	}
 
 	if apiKey == "" {
